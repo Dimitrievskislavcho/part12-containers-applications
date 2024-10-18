@@ -1,0 +1,21 @@
+
+Script started on 2024-10-14 19:03:57+02:00 [TERM="xterm-256color" TTY="/dev/pts/7" COLUMNS="120" LINES="30"]
+[1m[7m%[27m[1m[0m                                                                                                                       
+ 
+]2;dimitrievskislavcho@SlavchoD-5540:/mnt/c/Users/slavcho.dimitrievski]1;...dimitrievski]7;file://SlavchoD-5540/mnt/c/Users/slavcho.dimitrievski\
+[0m[27m[24m[J[01;36m☁ [01;32m [32mslavcho.dimitrievski [01;36m[01;34m [00m[K[?1h=[?2004hscriptdocker run -it ubuntu bash[?1l>[?2004l
+
+]2;docker run -it ubuntu bash]1;docker[?2004h]0;root@a14f006cafdb: /root@a14f006cafdb:/# mkdir /usr/src/app
+[?2004l
+[?2004h]0;root@a14f006cafdb: /root@a14f006cafdb:/# touch /user  r/src/app/index.js
+[?2004l
+[?2004h]0;root@a14f006cafdb: /root@a14f006cafdb:/# [Kexit
+[?2004l
+exit
+[1m[7m%[27m[1m[0m                                                                                                                       
+ 
+]2;dimitrievskislavcho@SlavchoD-5540:/mnt/c/Users/slavcho.dimitrievski]1;...dimitrievski]7;file://SlavchoD-5540/mnt/c/Users/slavcho.dimitrievski\
+[0m[27m[24m[J[01;36m☁ [01;32m [32mslavcho.dimitrievski [01;36m[01;34m [00m[K[?1h=[?2004heexit[?1l>[?2004l
+
+]2;exit]1;exit
+Script done on 2024-10-14 19:05:05+02:00 [COMMAND_EXIT_CODE="0"]

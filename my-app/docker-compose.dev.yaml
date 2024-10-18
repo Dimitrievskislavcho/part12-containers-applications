@@ -1,0 +1,41 @@
+services:
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    depends_on:
+      - express-app
+  react-app:
+    image: my-react-dev-image
+    build:
+      context: ./frontend # The context will pick this directory as the "build context"
+      dockerfile: dev.Dockerfile # This will simply tell which dockerfile to read
+    volumes:
+      - ./frontend:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+    container_name: my-react-dev-container
+    command: ['npm', 'run', 'dev', '--', '--host']
+    environment:
+      VITE_API_BASE_URL: http://localhost:8080/api
+      # Add these environment variables for Vite
+      CHOKIDAR_USEPOLLING: 'true'
+      WATCHPACK_POLLING: 'true'
+    restart: 'no'
+  express-app:
+    image: my-app-dev-image
+    build:
+      context: ./backend
+      dockerfile: dev.Dockerfile
+    container_name: my-app-dev-container
+    environment:
+      CAT_API_KEY: ${CAT_API_KEY}
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/usr/src/app
+
+volumes:
+  node_modules:
